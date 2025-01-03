@@ -148,7 +148,7 @@ def test_download_a_challan(data):
     time.sleep(2)  # Adjust the time as needed for the dialog to appear
 
     # Type the file name in the "Save As" dialog
-    pyautogui.write(str(data["TIN"]) + "-a-challan.pdf")
+    pyautogui.write(str(data["NAME"]) + "_"+ str(data["ID"]) + ".pdf")
 
     # Press Enter to confirm the save
     pyautogui.press("enter")
