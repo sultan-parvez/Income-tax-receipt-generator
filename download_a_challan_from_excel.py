@@ -143,14 +143,8 @@ def test_download_a_challan(data):
         "paperHeight": 11.0,
         "printBackground": True
     }
-    # result = driver.execute_cdp_cmd("Page.printToPDF", print_settings)
-    # actions = ActionChains(driver)
-
-    # actions.key_down(Keys.CONTROL).send_keys('p')
-    # key_up(Keys.CONTROL).send_keys(Keys.ENTER).perform()
     driver.execute_script("window.print();")
-    # driver.implicitly_wait(10)
-    time.sleep(10)
+   
 
     # Allow the print dialog to open and interact with it
     time.sleep(2)  # Adjust the time as needed for the dialog to appear
