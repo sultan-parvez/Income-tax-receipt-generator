@@ -24,6 +24,14 @@ def test_download_a_challan(data):
     firefox_options.set_preference("print.printer_Mozilla_Save_to_PDF.print_paper_name", "iso_a4")
     firefox_options.set_preference("print.printer_Mozilla_Save_to_PDF.print_to_file", True)
 
+    # Disable headers and footers
+    firefox_options.set_preference("print.print_headerleft", "")  # No left header
+    firefox_options.set_preference("print.print_headercenter", "")  # No center header
+    firefox_options.set_preference("print.print_headerright", "")  # No right header
+    firefox_options.set_preference("print.print_footerleft", "")  # No left footer
+    firefox_options.set_preference("print.print_footercenter", "")  # No center footer
+    firefox_options.set_preference("print.print_footerright", "")  # No right footer
+
     driver = webdriver.Firefox(options=firefox_options)
 
     driver.implicitly_wait(5)
